@@ -1,0 +1,16 @@
+@media only screen and (max-width: 768px) {
+  .form h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  input {
+    padding: 8px 12px;
+    width: 200px;
+  }
+
+  .search-btn {
+    padding: 8px 18px;
+    border-radius: 20px;
+  }
+}

@@ -1,21 +1,17 @@
 import React from "react";
 import "./App.css";
-import Form from "./components/Form";
+import "./responsive.css";
+import Home from "./components/Home";
+
+// API key and ID
+// const API_KEY = "4ac283b2ad4d0a72799ec2980ed2b3b2";
+// const API_ID = "8ab14eb9";
+// const url = `https://api.edamam.com/search?q=chicken&app_id=${API_ID}&app_key=${API_KEY}`;
 
 function App() {
-  const getRecipe = (e) => {
-    e.preventDefault();
-    console.log("Hey it Works");
-  };
-
   return (
     <div className="App">
-      <h2>
-        F<span>oo</span>die
-      </h2>
-      <div className="form">
-        <Form getRecipe={getRecipe} />
-      </div>
+      <Home />
     </div>
   );
 }
