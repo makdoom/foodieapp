@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&family=Poppins:wght@500&display=swap");
+
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", monospace;
+}
+
+.App {
+  text-align: center;
+}
+
+.App h2 {
+  font-size: 2.8rem;
+  margin: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.App h2 span {
+  color: #ff006e;
+}
