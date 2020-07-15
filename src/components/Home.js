@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Recipe.css";
 import Axios from "axios";
-import Recipe from "./Recipe";
+import Recipes from "./Recipes";
 
 // API key and ID
 const API_KEY = "4ac283b2ad4d0a72799ec2980ed2b3b2";
@@ -35,7 +35,7 @@ const Home = () => {
       <div className="form">
         <form onSubmit={onSubmit}>
           <h1 onClick={show}>
-            F<span>oo</span>die
+            F<span>oo</span>die{" "}
           </h1>
           <input
             type="text"
@@ -49,7 +49,7 @@ const Home = () => {
 
       <div className="recipes">
         {recipes.map((recipe, index) => (
-          <Recipe recipe={recipe} key={index} />
+          <Recipes recipe={recipe} key={index} />
         ))}
       </div>
     </>

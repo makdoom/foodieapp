@@ -1,24 +1,52 @@
 import React from "react";
-import "../responsive.css";
 
-const Recipe = ({ recipe }) => {
-  return (
-    <div className="card">
-      <img src={recipe.recipe.image} alt={recipe.recipe.label} />
-      <h5>
-        {recipe.recipe.label.length < 20
-          ? `${recipe.recipe.label}`
-          : `${recipe.recipe.label.substring(0, 20)} ...`}{" "}
-      </h5>
-      <p>PUBLISHER : {recipe.recipe.source}</p>
-      <div className="btn-section">
-        <button className="ingre-btn btn">
-          <span>Ingredients</span>
-        </button>
-        <button className="full-btn btn">Full Recipe</button>
+const API_KEY = "4ac283b2ad4d0a72799ec2980ed2b3b2";
+const API_ID = "8ab14eb9";
+class Recipe extends React.Component {
+  state = {
+    currentRecipe: [],
+    ingredients: [],
+  };
+  componentDidMount = async () => {
+    const title = this.props.location.state.recipe;
+    const calories = this.props.location.state.calories;
+
+    // Fetching the data of a particular recipe
+    const req = await fetch(
+      `https://api.edamam.com/search?q=${title}&app_id=${API_ID}&app_key=${API_KEY}`
+    );
+    const result = await req.json();
+    // const tempList = result.hits;
+    result.hits.filter((item) =>
+      item.recipe.calories === calories && item.recipe.label === title
+        ? this.setState({
+            currentRecipe: item.recipe,
+          })
+        : ""
+    );
+  };
+
+  render() {
+    // const recipe = this.state.currentRecipe;
+    // const ingre = this.state.ingredients;
+    console.log(this.state.currentRecipe);
+    return (
+      <div className="container">
+        {/* <div className="activ-recipe">
+          <img
+            src={recipe.image}
+            alt={recipe.label}
+            className="active-recipe-img"
+          />
+          <h3 className="active-recipe-title">{recipe.label}</h3>
+          <h4 className="active-recipe-publisher">
+            Publisher: <span>{recipe.source}</span>
+          </h4>
+          <div className="active-recipe-ingredients"></div>
+        </div> */}
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default Recipe;
