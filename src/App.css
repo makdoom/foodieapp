@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@500&family=Roboto+Mono:wght@400&family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@400&family=Roboto+Mono:wght@400&family=Source+Code+Pro&display=swap");
 
 *,
 html {
@@ -9,7 +9,8 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background: #f5f5f5;
+  background: #f1eff0;
+  box-sizing: border-box;
 }
 
 .App {
@@ -18,8 +19,7 @@ body {
 
 .form {
   width: 100%;
-  /* background: linear-gradient(to right, #11998e, #38ef7d); */
-  background: linear-gradient(to right, #866dff, #20bdff);
+  background: linear-gradient(to right, #bc4e9c, #f80759);
   padding: 10px;
   border-bottom-left-radius: 35px;
   border-bottom-right-radius: 35px;
@@ -32,16 +32,17 @@ body {
   color: #fff;
   letter-spacing: 8px;
   text-transform: uppercase;
+  font-weight: bold;
   margin-bottom: 6px;
 }
 
 input {
   padding: 10px 15px;
-  width: 250px;
+  width: 280px;
   border-radius: 20px;
   border: none;
   outline: none;
-  margin: 7px 12px 18px 12px;
+  margin: 7px 19px 18px 12px;
   font-size: 0.8rem;
   font-family: "Roboto Mono", monospace;
   letter-spacing: 1px;
@@ -59,7 +60,9 @@ input {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 18px;
-  transition: 0.3s ease-in;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  transition: 0.4s linear;
 }
 
 .search-btn:hover {

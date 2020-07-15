@@ -13,4 +13,12 @@
     padding: 8px 18px;
     border-radius: 20px;
   }
+
+  .full-btn {
+    padding: 5px 8px;
+  }
+
+  .recipes {
+    min-height: 75vh;
+  }
 }
