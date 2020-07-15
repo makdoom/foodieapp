@@ -9,7 +9,8 @@ function App() {
   return (
     <div className="App">
       <Route exact path="/" component={Home} />
-      <Route path="/recipe/:label" component={Recipe} />
+      <Route exact path="/recipe/:calories" component={Recipe} />
+      {/* <Route path="/recipe/:calories" component={Recipe} /> */}
     </div>
   );
 }

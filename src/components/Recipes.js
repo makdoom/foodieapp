@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Recipe = ({ recipe }) => {
-  return (
-    <div className="card">
+const Recipe = ({ recipes }) => {
+  return recipes.map((recipe, index) => (
+    <div className="card" key={index}>
       <img src={recipe.recipe.image} loading="lazy" alt={recipe.recipe.label} />
       <h5>
         {recipe.recipe.label.length < 20
@@ -12,13 +12,11 @@ const Recipe = ({ recipe }) => {
       </h5>
       <p>PUBLISHER : {recipe.recipe.source}</p>
       <div className="btn-section">
+        {/* <Link to="/recipe"> */}
         <Link
           to={{
             pathname: `/recipe/${recipe.recipe.calories}`,
-            state: {
-              recipe: recipe.recipe.label,
-              calories: recipe.recipe.calories,
-            },
+            state: { recipe: recipe.recipe },
           }}
         >
           <button className="ingre-btn btn">
@@ -29,7 +27,7 @@ const Recipe = ({ recipe }) => {
         <button className="full-btn btn">view Recipe</button>
       </div>
     </div>
-  );
+  ));
 };
 
 export default Recipe;

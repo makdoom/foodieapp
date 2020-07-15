@@ -48,9 +48,7 @@ const Home = () => {
       </div>
 
       <div className="recipes">
-        {recipes.map((recipe, index) => (
-          <Recipes recipe={recipe} key={index} />
-        ))}
+        <Recipes recipes={recipes} />
       </div>
     </>
   );
