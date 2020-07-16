@@ -18,7 +18,19 @@
     padding: 5px 8px;
   }
 
-  .recipes {
-    min-height: 75vh;
+  .active-recipe-img {
+    width: 100%;
+  }
+
+  .active-recipe-ingredients .ingredient-list {
+    width: 100%;
+    margin: 5px auto;
+  }
+
+  .active-recipe-footer .back {
+    padding: 5px 15px;
+  }
+  .active-recipe-publisher {
+    font-size: 1rem;
   }
 }

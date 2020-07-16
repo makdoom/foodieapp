@@ -10,7 +10,12 @@ const Recipe = ({ recipes }) => {
           ? `${recipe.recipe.label}`
           : `${recipe.recipe.label.substring(0, 20)} ...`}{" "}
       </h5>
-      <p>PUBLISHER : {recipe.recipe.source}</p>
+      <p>
+        PUBLISHER :{" "}
+        {recipe.recipe.source.length < 20
+          ? `${recipe.recipe.source}`
+          : `${recipe.recipe.source.substring(0, 15)} ...`}
+      </p>
       <div className="btn-section">
         {/* <Link to="/recipe"> */}
         <Link
@@ -24,7 +29,11 @@ const Recipe = ({ recipes }) => {
           </button>
         </Link>
 
-        <button className="full-btn btn">view Recipe</button>
+        <a href={recipe.recipe.url}>
+          <button className="full-btn btn">
+            <span>view Recipe</span>
+          </button>
+        </a>
       </div>
     </div>
   ));

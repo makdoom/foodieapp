@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "./Recipe.css";
+import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import Recipes from "./Recipes";
 
@@ -19,8 +18,6 @@ const Home = () => {
       );
       setRecipes(response.data.hits);
       setQuery("");
-    } else {
-      console.log("Please enter recipe name ");
     }
   };
 
@@ -29,13 +26,24 @@ const Home = () => {
     getData(query);
   };
 
+  useEffect(() => {
+    const data = localStorage.getItem("Recipe");
+    if (data) {
+      setRecipes(JSON.parse(data));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("Recipe", JSON.stringify(recipes));
+  });
+
   const show = () => console.log(recipes);
   return (
     <>
       <div className="form">
         <form onSubmit={onSubmit}>
           <h1 onClick={show}>
-            F<span>oo</span>die{" "}
+            F<span>oo</span>die
           </h1>
           <input
             type="text"
