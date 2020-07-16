@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-around;
   flex-flow: wrap;
-  min-height: 69vh;
+  min-height: 68vh;
 }
 
 .recipes .card {
