@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/foodieapp/static/css/main.4b10b193.chunk.css",
+    "main.js": "/foodieapp/static/js/main.c5240219.chunk.js",
+    "main.js.map": "/foodieapp/static/js/main.c5240219.chunk.js.map",
+    "runtime-main.js": "/foodieapp/static/js/runtime-main.365625dd.js",
+    "runtime-main.js.map": "/foodieapp/static/js/runtime-main.365625dd.js.map",
+    "static/js/2.e8e1c5c6.chunk.js": "/foodieapp/static/js/2.e8e1c5c6.chunk.js",
+    "static/js/2.e8e1c5c6.chunk.js.map": "/foodieapp/static/js/2.e8e1c5c6.chunk.js.map",
+    "index.html": "/foodieapp/index.html",
+    "precache-manifest.547354c040d71706f9fa12e1597c72bf.js": "/foodieapp/precache-manifest.547354c040d71706f9fa12e1597c72bf.js",
+    "service-worker.js": "/foodieapp/service-worker.js",
+    "static/css/main.4b10b193.chunk.css.map": "/foodieapp/static/css/main.4b10b193.chunk.css.map",
+    "static/js/2.e8e1c5c6.chunk.js.LICENSE.txt": "/foodieapp/static/js/2.e8e1c5c6.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.365625dd.js",
+    "static/js/2.e8e1c5c6.chunk.js",
+    "static/css/main.4b10b193.chunk.css",
+    "static/js/main.c5240219.chunk.js"
+  ]
+}
