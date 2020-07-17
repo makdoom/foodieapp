@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 import "./responsive.css";
-import "./components/Recipe.css";
+import "./Recipe.css";
+import "./RecipeDetail.css";
 import Home from "./components/Home";
 import { Route } from "react-router-dom";
-import "./components/RecipeDetail.css";
 import RecipeDetails from "./components/RecipeDetails";
 
 function App() {
